@@ -1,0 +1,27 @@
+name: Autograding
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  autograding:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run autograder for Program 1
+        run: python .autograder/autograder_prog1.py
+
+      - name: Run autograder for Program 2
+        run: python .autograder/autograder_prog2.py
+     - name: Update README.md with feedback and scores
+        run: |
+            echo "Program 1 Feedback: $(cat .autograder/input_output/feedback1.txt)" >> README.md
+            echo "Program 1 Score: $(cat .autograder/input_output/score1.txt)" >> README.md
+            echo "" >> README.md
+            echo "Program 2 Feedback: $(cat .autograder/input_output/feedback2.txt)" >> README.md
+            echo "Program 2 Score: $(cat .autograder/input_output/score2.txt)" >> README.md
