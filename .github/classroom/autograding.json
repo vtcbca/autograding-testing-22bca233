@@ -1,14 +1,24 @@
 {
   "tests": [
     {
-      "name": "testing",
+      "name": "script 1",
       "setup": "sudo -H pip3 install pytest",
       "run": "pytest",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 10
+    },
+    {
+      "name": "script 2",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python .autograder/autograder_prog2.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
     }
   ]
 }
