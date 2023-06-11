@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Python Program Autograding",
+      "setup": "",
+      "run": "python .autograder/autograder_prog1.py, python .autograder/autograder_prog2.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
